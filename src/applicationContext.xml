@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<bean id="userDao" class="com.ioc.UserDaoImpl"></bean>
+<bean id="userService" class="com.ioc.UserServiceImpl" >
+<property name="userdao" ref="userDao" />
+</bean>
+
+<bean id="bean1" class="com.instance.Bean1"></bean>
+<bean id="bean2" class="com.instance.MyBean2Factory" factory-method="createBean"></bean>
+
+<bean id="myBean3Factory" class="com.instance.MyBean3Factory"></bean>
+<bean id="bean3" factory-bean="myBean3Factory" factory-method="createBean"></bean>
+
+<bean id="scope" class="com.scope.Scope" scope="singleton"></bean>
+<bean id="scope2" class="com.scope.Scope" scope ="prototype"></bean>
+</beans>
