@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans 
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd"
+        >
 
     <!-- bean definitions here -->
 <bean id="userDao" class="com.ioc.UserDaoImpl"></bean>
@@ -19,4 +23,31 @@
 
 <bean id="scope" class="com.scope.Scope" scope="singleton"></bean>
 <bean id="scope2" class="com.scope.Scope" scope ="prototype"></bean>
+
+<bean id="user1" class="com.assemble.User">
+	<constructor-arg index="0" value="tom"></constructor-arg>
+	<constructor-arg index="1" value="123456"></constructor-arg>
+	<constructor-arg index="2">
+		<list>
+			<value>"constructorvalue1"</value>
+			<value>"constructorvalue2"</value>
+		</list>
+	</constructor-arg>
+</bean>
+
+<bean id="user2" class="com.assemble.User">
+	<property name="username" value="jerry"></property>
+	<property name="password" value="654321"></property>
+	<property name="list">
+		<list>
+			<value>"setlistvalue1"</value>
+			<value>"setlistvalue2"</value>
+		</list>
+	</property>
+</bean>
+
+<bean id="userDao1" class="com.annotation.UserDaoImpl"></bean>
+<bean id="userService1" class="com.annotation.UserServiceImpl"></bean>
+<bean id="userController" class="com.annotation.UserController"></bean>
+<context:component-scan base-package="com.annotation"></context:component-scan>
 </beans>
