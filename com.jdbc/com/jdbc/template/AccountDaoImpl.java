@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 public class AccountDaoImpl implements AccountDao {
 	
@@ -62,6 +65,18 @@ public class AccountDaoImpl implements AccountDao {
 		String sql = "select * from account";
 		RowMapper<Account> rowMapper = new BeanPropertyRowMapper<Account>(Account.class);
 		return this.jdbcTemplate.query(sql, rowMapper);
+	}
+
+	@Override
+	@Transactional(propagation=Propagation.REQUIRED,isolation=Isolation.DEFAULT,readOnly=false)
+	public void transfer(String outUser, String inUser, Double money) {
+		// TODO 自动生成的方法存根
+		this.jdbcTemplate.update("update account set balance = balance+? " + "where username = ?",money,inUser);
+		
+		int i = 1/0;
+		
+		this.jdbcTemplate.update("update account set balance = balance-? "+ "where username = ?",money,outUser);
+		
 	}
 
 }

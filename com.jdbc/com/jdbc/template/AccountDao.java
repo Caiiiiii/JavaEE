@@ -8,4 +8,5 @@ public interface AccountDao {
 	public int deleteAccount(int id);
 	public Account findAccountById(int id);
 	public List<Account> findAllAccount();
+	public void transfer(String outUser,String inUser,Double money);
 }
