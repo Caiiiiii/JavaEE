@@ -4,6 +4,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/com.aop"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/com.jdbc"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/srcMyBatis"/>
         <property name="context-root" value="JavaStudy201803"/>
         <property name="java-output-path" value="/JavaStudy201803/WebRoot/WEB-INF/classes"/>
     </wb-module>

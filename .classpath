@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="com.aop"/>
 	<classpathentry kind="src" path="com.jdbc"/>
+	<classpathentry kind="src" path="srcMyBatis"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
@@ -29,5 +30,18 @@
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/mysql-connector-java-5.1.7-bin.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-jdbc-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-tx-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/mybatis-3.4.6.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/ant-1.9.6.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/ant-launcher-1.9.6.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/asm-5.2.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/cglib-3.2.5.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/javassist-3.22.0-GA.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/log4j-api-2.3.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/log4j-core-2.3.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/ognl-3.1.16.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/mybatis-3.4.6/lib/slf4j-log4j12-1.7.25.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
