@@ -53,8 +53,8 @@ public class MybatisTest {
 //	 }
 //	 sqlSession.commit();
 	 
-	 Customer customer = sqlSession.selectOne("com.mybatis.mapper.CustomerMapper.findCustomerById",1);
-	 System.out.println(customer.toString());
+//	 Customer customer = sqlSession.selectOne("com.mybatis.mapper.CustomerMapper.findCustomerById",1);
+//	 System.out.println(customer.toString());
 	 	 List<Customer> customers = sqlSession.selectList("com.mybatis.mapper.CustomerMapper.findCustomerByName","j");
 	 for(Customer costomer1 :customers){
 		 System.out.println(costomer1);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.mapping.mapper.OrdersMapper">
+        <select id="findOrdersWithProduct" parameterType="Integer" resultMap="OrdersWithProductResult">
+            select * from tb_orders where id=#{id}
+        </select>
+        
+        <resultMap type="com.mapping.dao.Orders" id="OrdersWithProductResult">
+            <id property="id" column="id"/>
+            <result property="number" column="number"/>
+            <collection property="productList" column="id" ofType="com.mapping.dao.Product" 
+            select="com.mapping.mapper.ProductMapper.findProductById" ></collection>
+        </resultMap>
+        
+    </mapper>

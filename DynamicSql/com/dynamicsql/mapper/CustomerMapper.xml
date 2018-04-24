@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+   <mapper namespace="com.dynamicsql.mapper.CustomerMapper">
+   
+   <select id="findCustomerByIds" parameterType="List" resultType="com.dynamicsql.dao.Customer">
+       select * from t_customer where id in 
+       <foreach collection="list" item="id" index="index" open="(" separator="," close=")">
+           #{id}
+       </foreach>
+   </select>
+   
+   <update id="updateCustomer" parameterType="com.dynamicsql.dao.Customer">
+   		update t_customer
+   		<set>
+   			<if test="username != null and username !=''">
+   				username=#{username},
+   			</if>
+   			<if test="jobs != null and jobs !=''">
+   				 jobs=#{jobs},
+   			</if>
+   			<if test="phone != null and phone !=''">
+   				 phone=#{phone},
+   			</if>
+   		</set>
+   		where id =#{id}
+   </update>
+   
+   <select id="findCustomerByNameAndJobs" parameterType="com.dynamicsql.dao.Customer"
+    resultType="com.dynamicsql.dao.Customer">
+    select * from t_customer 
+		<trim prefix="where" prefixOverrides="and">
+				<if test="username != null and username != '' ">
+		    	  and username like concat('%',#{username},'%')
+		   		 </if>
+		    	<if test="jobs != null and jobs !='' ">
+		    	and jobs =#{jobs}
+		   		 </if>
+		</trim>
+
+    
+    <!--    
+     <choose>
+    	<when test="username != null and username !='' ">
+    		and username like concat('%',#{username}, '%')
+    	</when>
+    	<when test="jobs != null and jobs !='' ">
+    		 and jobs = #{jobs}
+    	</when>
+    	<otherwise>
+    		 and phone is not null
+    	</otherwise>
+    </choose> 
+    -->
+    
+    <!--  
+    <where>
+				<if test="username != null and username != '' ">
+		    	and username like concat('%',#{username},'%')
+		   		 </if>
+		    	<if test="jobs != null and jobs !='' ">
+		    	and jobs =#{jobs}
+		   		 </if>
+		</where>
+    -->
+   
+    </select>
+</mapper>
