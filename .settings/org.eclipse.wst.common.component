@@ -7,6 +7,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/srcMyBatis"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/DynamicSql"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/MybatisMapping"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/chapter10"/>
         <property name="context-root" value="JavaStudy201803"/>
         <property name="java-output-path" value="/JavaStudy201803/WebRoot/WEB-INF/classes"/>
     </wb-module>
