@@ -1,8 +1,12 @@
-package com.springMybatis.dao;
+package com.springMybatis.mapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import com.springMybatis.dao.Customer;
+import com.springMybatis.mapper.CustomerMapper;
+@Primary
 @Service
 public class CustomerServiceImpl implements CustomerService {
 	@Autowired
