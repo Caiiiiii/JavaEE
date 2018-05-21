@@ -9,6 +9,8 @@
 	<classpathentry kind="src" path="chapter10"/>
 	<classpathentry kind="src" path="chapter11"/>
 	<classpathentry kind="src" path="chapter12"/>
+	<classpathentry kind="src" path="chapter13"/>
+	<classpathentry kind="src" path="POJO"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
@@ -74,7 +76,6 @@
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-aspects-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-beans-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-context-4.2.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-core-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-expression-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-instrument-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-jms-4.2.2.RELEASE.jar"/>
@@ -83,5 +84,7 @@
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-oxm-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-test-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-websocket-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-core-4.3.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/JavaEE/其它jar包/spring-core-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
